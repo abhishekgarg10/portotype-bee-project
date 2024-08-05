@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Billing Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home2.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home2.html">Dashboard</a></li>
+                    <li><a href="analytic.html">Analytics</a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li class="dropdown">
+                        <a href="#users">Users</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="userlist.html">User List</a></li>
+                            <li><a href="adduser.html">Add User</a></li>
+                            <li><a href="#user-settings">User Settings</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <h1>Welcome to <img id="hello" src="logo.png"></h1>
+                <p>Our billing app is designed to simplify your billing processes, offering a seamless experience to manage your invoices and track payments. Explore our features and see how we can help streamline your financial management.</p>
+                <img src="billing-app.png" alt="Billing App">
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Services We Provide</h2>
+            <div class="service-list">
+                <div class="service">
+                    <img src="invoice-mangement.png" alt="Service 1">
+                    <h3>Invoice Management</h3>
+                    <p>Efficiently create, send, and track invoices with ease.</p>
+                </div>
+                <div class="service">
+                    <img src="payment-tracking.png" alt="Service 2">
+                    <h3>Payment Tracking</h3>
+                    <p>Keep track of your payments and view detailed reports.</p>
+                </div>
+                <div class="service">
+                    <img src="Analytic.png" alt="Service 3">
+                    <h3>Analytics & Reporting</h3>
+                    <p>Get insights into your financial data and generate detailed reports.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to our support team.</p>
+            <a href="contact.html" class="btn btn-primary">Contact Support</a>
+        </section>
+    </main>
+</body>
+</html>

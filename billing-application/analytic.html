@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Billing Web App</title>
+    <link rel="stylesheet" href="analytic.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js library for charts -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home2.html">Dashboard</a></li>
+                    <li><a href="analytic.html">Analytics</a></li>
+                    <li><a href="invoice.html">Invoice</a></li>
+                    <li class="dropdown">
+                        <a href="#users">Users</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="userlist.html">User List</a></li>
+                            <li><a href="adduser.html">Add User</a></li>
+                            <li><a href="#user-settings">User Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="analytics-overview">
+            <h1>Analytics Overview</h1>
+            <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="expensesChart"></canvas>
+            </div>
+            <div class="summary">
+                <div class="summary-item">
+                    <h2>Total Revenue</h2>
+                    <p>RS 120,000,0</p>
+                </div>
+                <div class="summary-item">
+                    <h2>Total Expenses</h2>
+                    <p>RS 80,000,0</p>
+                </div>
+                <div class="summary-item">
+                    <h2>Net Profit</h2>
+                    <p>RS 40,000,0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-activity">
+            <h1>User Activity</h1>
+            <div class="chart-container">
+                <canvas id="userActivityChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: [12000, 15000, 18000, 22000, 25000, 27000, 30000],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Expenses Chart
+        const expensesCtx = document.getElementById('expensesChart').getContext('2d');
+        const expensesChart = new Chart(expensesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Expenses',
+                    data: [8000, 9000, 10000, 11000, 12000, 13000, 14000],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // User Activity Chart
+        const userActivityCtx = document.getElementById('userActivityChart').getContext('2d');
+        const userActivityChart = new Chart(userActivityCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Active Users', 'Inactive Users', 'New Users'],
+                datasets: [{
+                    label: 'User Activity',
+                    data: [120, 50, 30],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

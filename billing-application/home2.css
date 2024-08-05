@@ -1,0 +1,94 @@
+/* Home Page Styles */
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+#hello{
+    height: 90px;
+    width: 70px;
+}
+#intro {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#services {
+    margin: 40px 0;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.service p {
+    color: #666;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#contact a.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#contact a.btn-primary:hover {
+    background-color: #0056b3;
+}
